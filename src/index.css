@@ -1,0 +1,307 @@
+:root {
+  --spacing-md: 0.5rem;
+  --spacing-lg: 0.75rem;
+  --spacing-xl: 1rem; 
+  --spacing-4xxl: 2.25rem;
+  --spacing-6xxl: 2.5rem;
+  --border-radius-xs: 0.5rem; 
+  --border-radius-l: 2.5rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  
+
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.5rem; 
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media (min-width:600px) {
+  }
+}
+
+.flexHeading {
+  color: black;
+  padding: 1rem 0;
+}
+
+.loginHead {
+  color: black;
+}
+
+.startHeroDesktop {
+  display: flex;
+  padding: 1rem;
+}
+
+/* Knapp ovanpå som skall flyta */
+
+.btnLoginDesktop {
+  background: #e6e6e6;
+  color: black;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  text-decoration: none;
+  border: 2px solid #A376CC;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+
+  @media (max-width: 600px) {
+    display: none; 
+  }
+}
+
+/* Val sidan */
+
+.loginDesktopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+*/
+.loginPageMobiltBankID {
+  color: white;
+  border: 1px solid black;
+}
+
+/* card för att logga in användarnamn */
+.loginPageUser {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.btnUser {
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: -10;
+}
+
+.btnUser:hover {
+  background-color: #f0f0f0;
+}
+
+.imgContainer {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  background-color: #fff; /* To cover any overlap */
+  padding: 5px; /* Adjust as necessary */
+  border-radius: 5px; /* Adjust to match your design */
+}
+
+.bankIdLogo {
+  width: 100px;
+  height: 85px;
+}
+
+.userIcon {
+  width: 100px;
+  height: 85px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 100px; /* Adjust to make room for the logo */
+}
+
+.mainText {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subText {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.arrowIcon {
+  font-size: 20px;
+  margin-left: auto;
+}
+/* Modal BankID login */
+
+.btnModal {
+  display: flex;
+  align-items: center;
+  padding: 30px 35px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.btnModal:hover {
+  background-color: #f0f0f0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: relative;
+  display: block;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  background-color: white;
+  padding: 0 1.5rem;
+  max-height: 100vh;
+  max-width: 80vw;
+  border-radius: 10px;
+  z-index: 650;
+  text-align: center;
+}
+
+.theqrcode {
+    max-width: 92vh;
+    max-height: 92vh;
+    margin: 0 15px;
+}
+
+.theqrcode img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.close {
+  cursor: pointer;
+  color: black;
+}
+
+.modal-content2 {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0;
+  z-index: 400;
+  max-width: vw;
+  text-align: center;
+}
+
+ol {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  margin-bottom: 1rem;
+}
+
+
+.qrInstruction {
+  background-color: #CCCCCC;
+  color: black;
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0;
+  width: 400px;
+}
+
+.quickInstruction  {
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.quickInstruction li {
+  list-style-type: none;
+}
+
+/* Waitingsidan  tills jag kan lösa reDirecten */
+
+.Waitingcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+
+.scenarios {
+  color: white;
+}
+
+
+.flexArea {
+  background-color: #A2BBD1;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 20px;
+  border: 2px solid black;
+}
