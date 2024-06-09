@@ -1,34 +1,32 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import CardButtonUserLogin from './CardButtonUserLogin';
-import CardButtonBankIDLogin from './CardButtonBankIDLogin';
+import Dropdown from './Dropdown';
+import Dropdown2 from './Dropdown2';
+import LoginTile from './LoginTile';
+import LoginTile2 from './LoginTile2';
+import { Link } from 'react-router-dom';
 
-export const DrawerContents = () => {
-    const navigateTo = (path) => {
-      window.history.pushState(null, null, path);
-      window.dispatchEvent(new Event('popstate'));
-    }
-  }
-
-export const DrawerMobile = ({ isOpen }) => {
-    const navigate = useNavigate(); // useNavigate hook
-  
-    return (
-      <div className={`Drawer__Container ${isOpen && "Drawer__Container--isOpen"}`}>
-        <DrawerContents />
-            <div className="helpText" onClick={() => navigate('*')}>Stäng X</div>
-                <div className="flexContainer">
-                <p>Corporate</p>
-                <h4 className="flexHeading">Välj hur du vill logga in - företag</h4>
-                    <div className="loginOptions">
-                        <div className="bankIDLoginMobile">
-                        <CardButtonBankIDLogin />
-                        </div>
-                        <div className="user">
-                        <CardButtonUserLogin />
-                    </div>
-                </div>
+    const MobileDrawer = ({ isOpen, onClose }) => {
+      return (
+        <div className={`Drawer__Container ${isOpen ? 'Drawer__Container--isOpen' : ''}`}>
+          <div className="DrawerContainer">
+          <div className="Drawer__Header">
+            <button onClick={onClose} className="Drawer__CloseButton">Close</button>
+          </div>
+          <div className="optionHeading">
+            <p>Corporate</p>
+            <p>myLogin</p>
+            <h4 className="optionHeadline">Choose your perfered login</h4>
+              <LoginTile />
+              <Dropdown />
+              <LoginTile2/>
+              <Dropdown2 />
+              <div>
+              <Link className="optionCancel" to="/"><p>Cancel?</p></Link>
+              </div>
             </div>
+          </div>
         </div>
-    );
-  };
+      );
+    };
+    
+    export default MobileDrawer;

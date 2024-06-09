@@ -1,0 +1,425 @@
+/* To do
+Desktop - Loginoption sidan göra om till kort, tabs, sida för lyckade och misslyckade
+Mobile - Drawer, tabs, responsiviteten, sida för lyckade och misslyckade
+Responsiveteten
+Keyboard
+Readme
+
+
+/* Sticky button & tooltip for mobile */ 
+
+.sticky-tooltip-button-wrapper {
+    position: fixed;  
+    bottom: 2rem;
+    left: 35%;
+    width: 100%;
+    z-index: 100;
+  
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+  
+  .sticky-tooltip-button {
+    position: relative;
+    background-color: #FFDA00;
+    color: black;
+    border: 2px solid #fff;
+    padding: var(--spacing-lg) var(--spacing-4xxl);
+    margin: 0 1rem;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    border-radius: var(--border-radius-l);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-m);
+  }
+  
+  .sticky-tooltip-button:active {
+    transform: translateY(5px);
+  }
+
+  .sticky-tooltip-button:focus {
+    outline: 2px solid #A376CC; 
+    outline-offset: 2px;
+  }
+
+  
+  .sticky-tooltip-button:active {
+    transform: translateY(5px);
+  }
+  
+  .sticky-tooltip-button .tooltip-text {
+    visibility: hidden;
+    width: 150px;
+    background-color: #A376CC;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -75px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .sticky-tooltip-button:hover .tooltip-text,
+  .sticky-tooltip-button:focus .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
+.Drawer__Container {
+    height: 500px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    background-color: 
+    #666666;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 5px 0px 18px rgb(0, 0, 0, 0);
+    z-index: 100;
+  }
+  
+  .Drawer__Container--isOpen {
+    transform: translateY(0%);
+    box-shadow: unset;
+    box-shadow: 5px 8px 18px rgb(0, 0, 0, 0.7);
+  }
+
+  .DrawerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Drawer__Header {
+    padding: 0.5rem;
+  }
+
+  .Drawer__CloseButton {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Syns på sidan home men täcks av overlay när drawer triggas */
+  
+  .PageContents__Container {
+    color: #d8d8d8;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+
+  /* Sticky button Desktop*/
+/* Jag vill göra denna mobile first men det fungerar inte... 
+  
+.btnLoginDesktop {
+    display: none;
+    
+  
+    @media (max-width: 600px) {
+      background: #FFDA00;
+      color: black;
+      position: fixed;
+      top: 0.5rem;
+      right: 0.5rem;
+      text-decoration: none;
+      border: 3px solid #ffffff;
+      padding: 0.5rem 2rem;
+      border-radius: 30px;
+      font-weight: var(--font-weight-semibold);
+      opacity: 0.8;
+    }
+  }
+
+
+  
+  .btnLoginDesktop:hover {
+    display: none;
+
+    @media (max-width: 600px) {
+      background-color: #A376CC;
+      color: white;
+    }
+  }
+
+  .btnLoginDesktop:focus {
+    display: none;
+
+    @media (max-width: 600px) {
+      outline: none;
+      box-shadow: 0 0 0 3px rgb(255, 254, 229);
+    }
+  }
+  */
+
+  
+  .btnLoginDesktop {
+    background: #FFDA00;
+    color: black;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    text-decoration: none;
+    border: 3px solid #ffffff;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    font-weight: var(--font-weight-semibold);
+    opacity: 0.8;
+    
+  
+    @media (max-width: 600px) {
+      display: none; 
+    }
+  }
+  
+  .btnLoginDesktop:hover {
+    background-color: #A376CC;
+    color: white;
+
+    @media (max-width: 600px) {
+      display: none; 
+    }
+  }
+
+  .btnLoginDesktop:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(255, 254, 229);
+
+    @media (max-width: 600px) {
+      display: none; 
+    }
+  }
+
+  
+.startHeroDesktop {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 1.5rem;
+  }
+
+/* Kort på framsidan */
+
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin-top: 2rem;
+  
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+  
+  .cardHelp  {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-xs);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out; 
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+  
+    @media (min-width:1024px) {
+      grid-area: 1 / 1 / 2 / 4;
+    }
+  }
+
+  .cardHelp:hover,
+  .cardBankID:hover,
+  .cardCookie:hover {
+    background-color: #e0e0e0
+  }
+
+  .cardHelp:focus,
+  .cardImage1:focus,
+  .cardImage2:focus,
+  .cardBankID:focus,
+  .cardCookie:focus {
+    color: #A376CC;
+  }
+
+  .cardHelp:focus-within,
+  .cardImage1:focus-within,
+  .cardImage2:focus-within,
+  .cardBankID:focus-within,
+  .cardCookie:focus-within {
+    outline: 2px solid #A376CC; 
+    outline-offset: 2px;
+  }
+
+  .cardHelp Link::after,
+  .cardBankID Link::after,
+  .cardCookie Link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .cardHelpContent {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cardBannerHelp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #666666;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .cardHelpText {
+    padding: 2rem;
+    color: #333;
+  }
+
+  
+  .cardHelpHeading {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .card-action {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+
+  
+  .cardImage1 {
+    display: none;
+  
+    @media (min-width:1024px) {
+      display: grid;
+      grid-area: 1 / 4 / 2 / 6;
+      background-color: #EDF1F6;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius-xs);
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+  
+  .cardBankID { 
+    grid-area: 2 / 1 / 3 / 2; 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-xs);
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+  
+    @media (min-width:1024px) {
+      grid-area: 2 / 2 / 3 / 4;
+    }
+  }
+
+  
+  .cardBannerBID {
+    width: 80%;
+    background-color: #666666;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0 1rem 0 0;
+    gap: 0.8rem;
+  }
+  
+  .cardBIDText {
+    padding: 2rem;
+    color: #333;
+  }
+
+  .cardBankIDContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .cardImage2{
+    display: none;
+  
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-area: 2 / 1 / 3 / 2;
+      background-color: #EDF1F6;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius-xs);
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+  
+
+  
+  /* Card about Cookies */ 
+  
+  .cardCookie {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-xs);
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+  
+  
+    @media (min-width:1024px) {
+      grid-area: 2 / 4 / 3 / 6;
+    }
+  }
+
+  
+  .cardBannerCookie {
+    width: 80%;
+    align-self: flex-end;
+    background-color: #666666;
+    color: white;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem 0 0 1rem;
+    gap: 0.8rem;
+  }
+    
+  
+  .cardCookieContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cardCookieText {
+    padding: 2rem;
+    color: #333;
+  }
+  

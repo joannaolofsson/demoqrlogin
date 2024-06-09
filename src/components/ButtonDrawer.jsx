@@ -1,8 +1,8 @@
-
 import React, {useState} from "react";
 import '../App.css';
+import '../Start.css';
 
-const ButtonDrawer = ({ onClick }) => {
+const ButtonDrawer = ({ onClick, buttonRef }) => {
     const [isLoading, setIsLoading] = useState(false);
   
     const handleClick = async () => {
@@ -15,17 +15,26 @@ const ButtonDrawer = ({ onClick }) => {
     };
 
     return(
-    <div className="sticky-tooltip-button" aria-describedby="sticky-tooltip" tabIndex="0" onClick={handleClick}>
-      {isLoading ? (
-        <div className="spinner">Loading...</div>
-      ):(
-        <>
-      <p>Login</p>
-      <span id="sticky-tooltip" className="tooltip-text">This is a sticky button tooltip</span>
-        </>
-      )}
+      <div className="sticky-tooltip-button-wrapper">
+        <button 
+          className="sticky-tooltip-button" 
+          aria-describedby="sticky-tooltip" 
+          tabIndex="0" 
+          ref={buttonRef}
+          onClick={handleClick}
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <div className="spinner">Loading...</div>
+          ) : (
+            <>
+              <p>Login</p>
+              <span id="sticky-tooltip" className="tooltip-text">Click the login button</span>
+            </>
+          )}
+        </button>
     </div>
   );
-}
+};
 
 export default ButtonDrawer;

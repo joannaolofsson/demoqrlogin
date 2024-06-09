@@ -4,7 +4,7 @@ import '../App.css'
 import '../index.css'
 
 
-function MobileWaiting() {
+function LoadingMobile() {
   return (
     <>
     <div className="flexContainer">
@@ -16,13 +16,9 @@ function MobileWaiting() {
         där det tar användaren för lång tid att logga in. 
         </p>
       </div>
-      <div className="scenarios">
-      <Link to="/dashboard" className="lyckadInloggning">Framgång</Link>
-      <Link to="/Misslyckades" className="misslyckadInloggning">Misslyckad</Link>
-      </div>
     </div>
     </>
   )
 }
 
-export default MobileWaiting;
+export default LoadingMobile;

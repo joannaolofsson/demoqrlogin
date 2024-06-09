@@ -1,0 +1,150 @@
+
+/* Overlay till sidan med QR koden */  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+.modal {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; 
+  }
+  
+  .modal-content {
+    position: relative;
+    display: block;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    background-color: #767676;
+    padding: 0 1.5rem;
+    max-height: 100vh;
+    max-width: 80vw;
+    border-radius: 10px;
+    z-index: 650;
+    text-align: center;
+  }
+  
+.qrPageContainer {
+    background-color: transparent;
+}
+
+.qr-wrapper {
+    background-color: transparent;
+}
+
+.theqrcode {
+    max-width: 92vh;
+    max-height: 92vh;
+    margin: 0 16px;
+}
+
+.theqrcode img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+
+.reloadArea {
+    background-color: #EDF1F6;
+    margin: 0.5rem auto;
+    border-radius: var(--border-radius-xs);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .reloadInfo {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .reloadCount {
+    padding: 0 0.5rem;
+  }
+  .reloadMax {
+    padding: 0 0.5rem;
+  }
+
+
+/* Instruktioner & hjälptexter */
+
+  
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+.instruction-wrapper {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: #EDF1F6;
+    padding: 0;
+    z-index: 400;
+    max-width: 100vw;
+    border-radius: 1rem;
+  }
+
+
+  .qrInstruction {
+    text-align: left;
+    padding: 0.25rem 0.25rem 0.25rem 3rem;
+    border-radius: 1rem;
+  }
+
+
+  .change-wrapper{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: right;
+    width: 400px;
+    padding: 0.25rem;
+  }
+
+  .change-wrapper:focus-within {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .changeLoginAlt {
+    cursor: pointer;
+    color: white;
+    border: none; 
+  }
+/*
+  .changeLoginAlt:hover {
+    background-color: #e6e6e6;
+    color: black;
+    border-radius: var(--border-radius-xs);
+    padding: 0.25rem;
+  }
+
+  .changeLoginAlt:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+*/
+  
+
