@@ -1,9 +1,10 @@
 import React from 'react';
-import BankIDIcon from '../BankIDLogo.svg';
-import ProfileImg from '../assets/IconProfile.png';
+import BankIDIcon from '../assets/BankIDLogo.svg';
+import UserLogo from '../assets/UserIcon.svg';
+import { Link } from 'react-router-dom';
 
 
-export const MobileDrawer = ({ isOpen }) => (
+export const DrawerMobile = ({ isOpen }) => (
   <div className={`Drawer__Container ${isOpen && "Drawer__Container--isOpen"}`}>
     <DrawerContents />
   </div>
@@ -17,24 +18,25 @@ export const DrawerContents = () => {
 
   return (
     <div className="flexContainer">
-      <h3 className="flexHeading">Välj hur du vill logga in - företag</h3>
-      <div className="loginOptions">
-        <ul>
-          <li className="mobiltBankID">
-            <div className="cardBankID" onClick={() => navigateTo('/MobileWaiting')}>
-              <h5 className="mobiltQr">Mobilt BankID</h5>
+      <div className="closeText" onClick={() => navigateTo('*')}>Close X</div>
+      <div className="flexHeading">
+            <p>My personal</p>
+            <h3>Login</h3>
+ 
+      <h3>Choose you login:</h3>
+      </div>
+          <div className="mobiltBankID">
+            <div className="cardBankID" onClick={() => navigateTo('/')}>
+              <h5 className="mobiltQr">Mobile BankID</h5>
               <img src={BankIDIcon} alt="BankIDs icon" />
             </div>
-          </li>
-          <li className="user">
-            <div className="cardUser" onClick={() => navigateTo('/UserLoginPage')}>
-              <h5 className="userLink">Användarnamn</h5>
-              <img src={ProfileImg} alt="Icon Profil" />
+          </div>
+          <div className="user">
+            <div className="cardUser" onClick={() => navigateTo('/')}>
+              <h5 className="userLink">Email & password</h5>
+              <img src={UserLogo} alt="Icon Profil" />
             </div>
-          </li>
-          <li> <div className="helpText" onClick={() => navigateTo('*')}>Stäng X</div></li>
-        </ul>
-      </div>
-      </div>
+          </div>
+              </div>
   );
 };
