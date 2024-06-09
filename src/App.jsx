@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import { useCookies } from 'react-cookie';
-import LoadingMobile from './pages/LoadingMobile';
 import { Link } from 'react-router-dom';
 import LoginOptionDesktop from './pages/ChooseLoginOption';
 
@@ -55,7 +54,6 @@ function App() {
 
       <Routes>
         <Route path="/ChooseLoginOption" element={<LoginOptionDesktop />} />
-        <Route path="/LoadingMobile" element={<LoadingMobile />} />
         <Route path="/" element={<Home />} />
         {/* Default Route */}
         <Route path="*" element={<Navigate to="/" />} />

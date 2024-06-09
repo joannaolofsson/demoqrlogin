@@ -10,13 +10,14 @@ import { GrCircleInformation } from "react-icons/gr";
 function HomeContent() {
   return (
     <>
-      <div className="container">
+      
+        <Link to="/ChooseLoginOption" className="btnLoginDesktop">Login</Link>
+        <nav>
         <div className="startHeroDesktop">
           <img src={HeartIcon} alt="login" />
           <h1>I love login</h1>
         </div>
-      </div>
-
+        </nav>
       <div className="container">
         <div className="cardList">
           <div className="cardHelp" tabIndex="0">

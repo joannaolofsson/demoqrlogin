@@ -26,15 +26,15 @@
 }
 
 .btnModal {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 1rem;
     height: 5.5rem;
     width: 340px;
     overflow: hidden;
     border: 1px solid #cccccc;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: var(--border-radius-xs);
     background-color: #ffffff;
     cursor: pointer;
     color: black;
@@ -44,16 +44,7 @@
 
 
     @media (min-width: 600px) {
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 1rem;
-      height: 5.5rem;
       width: 400px;
-      border: 1px solid #cccccc;
-      border-radius: 1rem 1rem 0 0;
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s;
     }
   }
 
@@ -92,15 +83,38 @@
     top: 0;
   }
 
+  .BankID-wrapper {
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Text-wrapper {
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrowIcon {
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 0 0;
+  }
+  
 
   .btnPass {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
     width: 340px;
     border: 1px solid #ccc;
-    border-radius: 1rem 1rem 0 0;
-    background-color: #f0f0f0;
+    border-radius: var(--border-radius-xs);
+    background-color: #fff;
     cursor: not-allowed;
     opacity: 0.6;
     color: #cccccc;
@@ -109,57 +123,16 @@
     list-style-type: none;
 
     @media (min-width: 600px) {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
       width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 1rem 1rem 0 0;
-      background-color: #f0f0f0;
-      cursor: not-allowed;
-      opacity: 0.6;
-      color: #cccccc;
-      z-index: -100;
-      outline: none;
-      list-style-type: none;
     }
-  }
-/*
-.contentContainer {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0 1rem;
-  }*/
-
-.bankIDLogo {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.mainText {
-    grid-area: 1 / 2 / 2 / 3;
-    font-size: 1rem;
-    font-weight: 600;
   }
 
   .userText {
-    grid-area: 1 / 2 / 2 / 3;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 2.25rem 0 2.25rem 1rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-.arrowIcon {
-  grid-area: 1 / 3 / 2 / 4;
-  margin: 0 0 0 1rem;
-}  
-
-
-
-
-
 
 /* Hjälptext */ 
 
@@ -175,61 +148,45 @@
 
 .optionCancel {
     cursor: pointer;
-    color: black;
     border: none; 
 }
 
-.optionStyle {
+.optionCancel p{
+  color: black;
+}
+
+.optionCancel p:hover{
+  color: black;
+}
+
+.optionCancel p:focus-within{
+  outline: 2px solid #A376CC; 
+  outline-offset: 2px;
+}
+
+.option-wrapper{
   background-color: none;
   padding: 0.1rem 0.2rem;
+  outline: none;
 }
-
-
-.optionStyle:hover {
-    background-color: #e6e6e6;
-    border-radius: var(--border-radius-xs);
-    color: black;
-    padding: 0.1rem 0.2rem;
-}
-
-
-  .optionStyle:focus-within {  
-    outline: 2px solid #A376CC; 
-    outline-offset: 2px;
-}
-
 
 /* Dropdown function med pil */
 
 .dropContainer {
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 0 0rem 1rem 1rem;
     margin: 0 0 1rem 0;
     overflow: hidden;
-
-    @media (min-width: 600px) {
-      background-color: #ffffff;
-      border-radius: 0 0rem 1rem 1rem;
-      margin: 0 0 1rem 0;
-      overflow: hidden;
-    }
-}
-
-.dropContainer:focus {
-  color: transparent;
-
-  @media (min-width: 600px) {
-    color: #A376CC;
-  }
-
-}
-
-.dropContainer:focus-within {
+    padding: 0.4rem;
     outline: none;
 
     @media (min-width: 600px) {
-      outline: 2px solid #A376CC; 
-    outline-offset: 2px;
+      background-color: transparent;
+      border-radius: 0 0rem 1rem 1rem;
+      margin: 0 0 1rem 0;
+      overflow: hidden;
+      padding: 0.4rem;
+      outline: none;
     }
 }
 
@@ -245,20 +202,30 @@
 .btnDropdown {
     background-color: transparent;
     border: none;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-xl);
     padding: 1rem;
     cursor: pointer;
     outline: none;
 }
 
 
+.btnDropdown:focus-within {
+  outline: none;
+
+  @media (min-width: 600px) {
+    outline: 2px solid #A376CC; 
+    outline-offset: 2px;
+  }
+}
 
 .dropList {
+  background-color: #ffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 0 0 0 2rem; 
     color: black;
+    border-radius: var(--border-radius-xs);
 }
 

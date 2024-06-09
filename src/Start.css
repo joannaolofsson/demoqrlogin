@@ -1,79 +1,26 @@
-/* To do
-Desktop - Loginoption sidan göra om till kort, tabs, sida för lyckade och misslyckade
-Mobile - Drawer, tabs, responsiviteten, sida för lyckade och misslyckade
-Responsiveteten
-Keyboard
-Readme
-
-
-/* Sticky button & tooltip for mobile */ 
-
-.sticky-tooltip-button-wrapper {
-    position: fixed;  
-    bottom: 2rem;
-    left: 35%;
-    width: 100%;
-    z-index: 100;
-  
-    @media (min-width: 600px) {
-      display: none;
-    }
-  }
-  
-  .sticky-tooltip-button {
-    position: relative;
+.btnDrawer {
     background-color: #FFDA00;
     color: black;
-    border: 2px solid #fff;
-    padding: var(--spacing-lg) var(--spacing-4xxl);
-    margin: 0 1rem;
+    border: 3px solid #ffffff;
+    padding: 0.5rem 2rem;
+    margin: 0 auto;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
     border-radius: var(--border-radius-l);
-    display: flex;
-    justify-content: center;
+    opacity: 0.8;
+    display: inline-flex;
     align-items: center;
-    gap: var(--spacing-m);
-  }
-  
-  .sticky-tooltip-button:active {
-    transform: translateY(5px);
-  }
-
-  .sticky-tooltip-button:focus {
-    outline: 2px solid #A376CC; 
-    outline-offset: 2px;
-  }
-
-  
-  .sticky-tooltip-button:active {
-    transform: translateY(5px);
-  }
-  
-  .sticky-tooltip-button .tooltip-text {
-    visibility: hidden;
-    width: 150px;
-    background-color: #A376CC;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
+    justify-content: center;
+    position: fixed;
+    bottom: 5rem;
+    left: 33%;
     z-index: 1;
-    bottom: 125%; 
-    left: 50%;
-    margin-left: -75px; 
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .sticky-tooltip-button:hover .tooltip-text,
-  .sticky-tooltip-button:focus .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
 
+    @media (min-width: 600px) {
+      display: none;
+    }
+}
   
 .Drawer__Container {
     height: 500px;
@@ -121,49 +68,6 @@ Readme
     text-decoration: none;
   }
 
-  /* Sticky button Desktop*/
-/* Jag vill göra denna mobile first men det fungerar inte... 
-  
-.btnLoginDesktop {
-    display: none;
-    
-  
-    @media (max-width: 600px) {
-      background: #FFDA00;
-      color: black;
-      position: fixed;
-      top: 0.5rem;
-      right: 0.5rem;
-      text-decoration: none;
-      border: 3px solid #ffffff;
-      padding: 0.5rem 2rem;
-      border-radius: 30px;
-      font-weight: var(--font-weight-semibold);
-      opacity: 0.8;
-    }
-  }
-
-
-  
-  .btnLoginDesktop:hover {
-    display: none;
-
-    @media (max-width: 600px) {
-      background-color: #A376CC;
-      color: white;
-    }
-  }
-
-  .btnLoginDesktop:focus {
-    display: none;
-
-    @media (max-width: 600px) {
-      outline: none;
-      box-shadow: 0 0 0 3px rgb(255, 254, 229);
-    }
-  }
-  */
-
   
   .btnLoginDesktop {
     background: #FFDA00;
@@ -207,6 +111,7 @@ Readme
     display: flex;
     flex-direction: row;
     padding: 0 0 0 1.5rem;
+    margin: 0 2rem;
   }
 
 /* Kort på framsidan */

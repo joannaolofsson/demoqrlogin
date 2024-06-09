@@ -1,33 +1,30 @@
-import '../Start.css';
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import '../App.css'
+import '../Start.css'
+import { DrawerMobile } from '../components/DrawerMobile';
 import HomeContent from '../components/HomeContent';
-import ButtonDrawer from '../components/ButtonDrawer';
-import MobileDrawer from '../components/MobileDrawer';
 
-function Home({ consented }) {
-  const [isOpen, setIsOpen] = useState(false);
+const DrawerButton = ({ onClick }) => (
+  <div className="btnDrawer" onClick={onClick}>
+    <p>Login</p>
+  </div>
+);
+
+function Home() {
+  const [isOpen, setIsOpen] = React.useState(false);
   const toggleDrawer = () => setIsOpen(!isOpen);
-  const buttonRef = useRef(null);
-
-  useEffect(() => {
-    if (consented && buttonRef.current) {
-      buttonRef.current.focus();
-    }
-  }, [consented]);
 
   return (
     <>
-      <nav>
-        <Link to="/ChooseLoginOption" className="btnLoginDesktop" id="tab-1" tabIndex="0">Login</Link>
-        <ButtonDrawer onClick={toggleDrawer} buttonRef={buttonRef} />
-        <HomeContent />
-        <div>
-          <MobileDrawer isOpen={isOpen} onClose={toggleDrawer} />
+        <div className="BelowHeroMobileContainer">
+          <DrawerButton onClick={toggleDrawer} />
+          <DrawerMobile isOpen={isOpen} />
+          <HomeContent />
         </div>
-      </nav>
     </>
-  );
-}
+    )
+  }
 
-export default Home;
+      export default Home;
+
+
