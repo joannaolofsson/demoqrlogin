@@ -6,6 +6,7 @@ import Dropdown2 from '../components/Dropdown2';
 import BankIDIcon from '../assets/BankIDLogo.svg';
 import UserLogo from '../assets/UserIcon.svg';
 import { FaArrowRight } from "react-icons/fa";
+import Navbar from '../components/Navbar';
 
 function ChooseLoginOption() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,6 +21,7 @@ function ChooseLoginOption() {
 
   return (
     <>
+    <Navbar />
       <div className="flexContainer">
         <div className="flexContent">
           <div className="optionHeading">
@@ -29,7 +31,6 @@ function ChooseLoginOption() {
           <div className="optionHeadline">
             <h4>Choose your preferred login:</h4>
           </div>
-
           <button className="btnModal" onClick={handleModalOpen}>
             <div className="BankID-wrapper"><img src={BankIDIcon} alt="Klicka på BankID iconen"/></div>
             <div className="Text-wrapper"><p className="mainText">BankID med QR-kod</p></div>
@@ -39,7 +40,7 @@ function ChooseLoginOption() {
           <LoginwithQRCode isOpen={isModalOpen} onClose={handleModalClose} />
           <Dropdown />
           <div className="btnPass">
-              <div className="User-wrapper"><img src={UserLogo} alt="Disabled button with icon"/></div>
+              <div className="User-wrapper"><img src={UserLogo} alt="Ikon logga in med email och lösenord ej klickbar"/></div>
               <div className="Text-wrapper"><p>Disabled</p></div>
               <div className="arrowIcon"><FaArrowRight size={20} /></div>
           </div>

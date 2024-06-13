@@ -16,11 +16,9 @@ function Home() {
 
   return (
     <>
-        <div className="BelowHeroMobileContainer">
-          <DrawerButton onClick={toggleDrawer} />
-          <DrawerMobile isOpen={isOpen} />
-          <HomeContent />
-        </div>
+      <DrawerButton onClick={toggleDrawer} />
+      <DrawerMobile isOpen={isOpen} />
+      <HomeContent />
     </>
     )
   }

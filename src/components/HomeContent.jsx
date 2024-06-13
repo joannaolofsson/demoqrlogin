@@ -3,21 +3,15 @@ import '../App.css';
 import '../index.css';
 import '../Start.css';
 import { Link } from 'react-router-dom';
-import HeartIcon from '../assets/heart.svg';
 import { LuCookie } from "react-icons/lu";
 import { GrCircleInformation } from "react-icons/gr";
+import Navbar from './Navbar';
 
 function HomeContent() {
   return (
     <>
-      
-        <Link to="/ChooseLoginOption" className="btnLoginDesktop">Login</Link>
-        <nav>
-        <div className="startHeroDesktop">
-          <img src={HeartIcon} alt="login" />
-          <h1>I love login</h1>
-        </div>
-        </nav>
+    <Link to="/ChooseLoginOption" className="btnLoginDesktop" tabIndex="0">Login</Link>
+      <Navbar />
       <div className="container">
         <div className="cardList">
           <div className="cardHelp" tabIndex="0">

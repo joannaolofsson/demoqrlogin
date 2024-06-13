@@ -29,7 +29,8 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="container">
+        <div className="flexContainer">
         {!consented && (
           <div className="cookie-banner" aria-live="polite">
               <div className="cookieText">
@@ -50,6 +51,7 @@ function App() {
             </div>
           </div>
         )}
+      </div>
       </div>
 
       <Routes>

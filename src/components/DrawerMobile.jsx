@@ -1,7 +1,6 @@
 import React from 'react';
 import BankIDIcon from '../assets/BankIDLogo.svg';
 import UserLogo from '../assets/UserIcon.svg';
-import { Link } from 'react-router-dom';
 
 
 export const DrawerMobile = ({ isOpen }) => (
@@ -28,13 +27,13 @@ export const DrawerContents = () => {
           <div className="mobiltBankID">
             <div className="cardBankID" onClick={() => navigateTo('/')}>
               <h5 className="mobiltQr">Mobile BankID</h5>
-              <img src={BankIDIcon} alt="BankIDs icon" />
+              <img src={BankIDIcon} alt="BankIDs logotyp att klicka på" />
             </div>
           </div>
           <div className="user">
             <div className="cardUser" onClick={() => navigateTo('/')}>
               <h5 className="userLink">Email & password</h5>
-              <img src={UserLogo} alt="Icon Profil" />
+              <img src={UserLogo} alt="Ikon för att logga in med email & lösenord" />
             </div>
           </div>
               </div>

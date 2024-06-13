@@ -80,7 +80,7 @@ function LoginwithQRCode({ isOpen, onClose }) {
                   src={qrCode}
                   id="theqrcode"
                   className="theqrcode"
-                  alt="Qr-code to scan with your BankID app."
+                  alt="QR koden att scanna med BankID appen."
                 />
               </div>
 
