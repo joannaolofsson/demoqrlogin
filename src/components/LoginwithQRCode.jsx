@@ -51,15 +51,15 @@ function LoginwithQRCode({ isOpen, onClose }) {
   useEffect(() => {
     let timer;
     if (isOpen) {
-      timer = setInterval(reloadQrCode, 30000); // Reload QR code every 30 seconds
-      openModal(); // Ensure modal settings are applied when opened
+      timer = setInterval(reloadQrCode, 30000); 
+      openModal(); 
     }
     return () => clearInterval(timer);
   }, [isOpen, reloadCount]);
 
   useEffect(() => {
     if (isOpen) {
-      // Set focus to the first focusable element in the modal
+
       const focusableElement = document.querySelector('.modal .change-wrapper');
       if (focusableElement) {
         focusableElement.focus();
@@ -80,7 +80,7 @@ function LoginwithQRCode({ isOpen, onClose }) {
                   src={qrCode}
                   id="theqrcode"
                   className="theqrcode"
-                  alt="QR koden att scanna med BankID appen."
+                  alt="QR code to scan with the BankID app"
                 />
               </div>
 
@@ -100,7 +100,7 @@ function LoginwithQRCode({ isOpen, onClose }) {
                   </div>
                 </div>
                 <div className="change-wrapper" >
-                  <Link className="changeLoginAlt"  onClick={closeModal}><p tabIndex="0">change login option</p></Link>
+                  <Link className="changeLoginAlt"  onClick={closeModal}><p className="changeP" tabIndex="0">change login option</p></Link>
                 </div>
               </div>
             </div>

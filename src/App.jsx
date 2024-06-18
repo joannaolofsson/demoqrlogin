@@ -57,7 +57,6 @@ function App() {
       <Routes>
         <Route path="/ChooseLoginOption" element={<LoginOptionDesktop />} />
         <Route path="/" element={<Home />} />
-        {/* Default Route */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

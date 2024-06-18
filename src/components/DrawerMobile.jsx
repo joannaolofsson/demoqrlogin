@@ -1,6 +1,8 @@
 import React from 'react';
 import BankIDIcon from '../assets/BankIDLogo.svg';
 import UserLogo from '../assets/UserIcon.svg';
+import { FaArrowRight } from "react-icons/fa";
+
 
 
 export const DrawerMobile = ({ isOpen }) => (
@@ -16,7 +18,7 @@ export const DrawerContents = () => {
   };
 
   return (
-    <div className="flexContainer">
+    <div className="drawerWrapper">
       <div className="closeText" onClick={() => navigateTo('*')}>Close X</div>
       <div className="flexHeading">
             <p>My personal</p>
@@ -24,16 +26,22 @@ export const DrawerContents = () => {
  
       <h3>Choose you login:</h3>
       </div>
-          <div className="mobiltBankID">
-            <div className="cardBankID" onClick={() => navigateTo('/')}>
-              <h5 className="mobiltQr">Mobile BankID</h5>
-              <img src={BankIDIcon} alt="BankIDs logotyp att klicka på" />
+          <div>
+            <div className="cardMobileBankID" onClick={() => navigateTo('/')}>
+            <img src={BankIDIcon} alt="BankIDs logotype to login with mobile BankID" />
+              <p>Mobile BankID</p>
+              <div>
+              <div className="arrowIcon"><FaArrowRight size={20}/></div>
+              </div>
             </div>
           </div>
-          <div className="user">
-            <div className="cardUser" onClick={() => navigateTo('/')}>
-              <h5 className="userLink">Email & password</h5>
-              <img src={UserLogo} alt="Ikon för att logga in med email & lösenord" />
+          <div>
+            <div className="cardUserLogin" onClick={() => navigateTo('/')}>
+            <img src={UserLogo} alt="Icon for login with email and password" />
+              <p>Email & password</p>
+              <div>
+              <div className="arrowIcon"><FaArrowRight size={20}/></div>
+              </div>
             </div>
           </div>
               </div>

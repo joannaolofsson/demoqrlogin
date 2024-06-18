@@ -10,10 +10,12 @@ import Navbar from './Navbar';
 function HomeContent() {
   return (
     <>
-    <Link to="/ChooseLoginOption" className="btnLoginDesktop" tabIndex="0">Login</Link>
-      <Navbar />
+
+   
+    <Navbar />
       <div className="container">
         <div className="cardList">
+        <Link to="/ChooseLoginOption" className="btnLoginDesktop" tabIndex="0">Login</Link>
           <div className="cardHelp" tabIndex="0">
             <Link to="#" className="card-action"  >
               <div className="cardHelpContent">

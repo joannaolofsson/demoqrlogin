@@ -14,7 +14,7 @@ const Dropdown = () => {
     return (
       <div className="dropContainer" tabIndex="0">
         <div className="dropArrow">
-        <button className="btnDropdown" onClick={handleOpen}><p>Så här loggar du in med QR kod</p></button>
+        <button className="btnDropdown" onClick={handleOpen}><p>How to login with QR code</p></button>
         {open ? <div><IoIosArrowUp size={24}/></div> : <div><IoIosArrowDown size={24}/></div>}
         </div>
         

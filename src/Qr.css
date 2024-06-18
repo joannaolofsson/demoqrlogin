@@ -62,7 +62,7 @@
 }
 
 .reloadArea {
-    background-color: #EDF1F6;
+    background-color: #5f6c7e;
     margin: 0.5rem auto;
     border: 2px solid #ccc;
     border-radius: var(--border-radius-xs);
@@ -70,7 +70,7 @@
   }
 
   .reloadInfo {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,6 +97,7 @@
     display: block;
     margin: 0 auto;
     background-color: #fff;
+    border: 1px solid #ccc;
     padding: 0.5rem;
     z-index: 400;
     max-width: 100vw;
@@ -108,6 +109,7 @@
     text-align: left;
     padding: 0.25rem 0.25rem 0.25rem 3rem;
     border-radius: 1rem;
+    color: black;
   }
 
   
@@ -117,26 +119,30 @@
     margin: 0 auto;
     text-align: right;
     width: 400px;
-    padding: 0.25rem;
   }
 
-
-  .changeLoginAlt p{
+  .changeP{
     cursor: pointer;
     color: black;
     border: none; 
     font-size: var(--font-size-xs);
+    margin: 0.75rem;
   }
 
-  .changeLoginAlt p:hover {
+  .changeP:hover {
     background-color: #ccc;
     border-radius: var(--border-radius-xs);
-    padding: 0.25rem;
+
   }
 
-  .changeLoginAlt p:focus {
+  .changeP:focus {
+    color: black;
+    border-radius: var(--border-radius-xs);
+  }
+
+  .changeP:focus-within {
     outline: 3px solid #2071B5;
-    outline-offset: 2px;
+    border-radius: var(--border-radius-xs);
   }
 
   

@@ -7,6 +7,7 @@ import BankIDIcon from '../assets/BankIDLogo.svg';
 import UserLogo from '../assets/UserIcon.svg';
 import { FaArrowRight } from "react-icons/fa";
 import Navbar from '../components/Navbar';
+import '../LoginOption.css';
 
 function ChooseLoginOption() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,22 +33,22 @@ function ChooseLoginOption() {
             <h4>Choose your preferred login:</h4>
           </div>
           <button className="btnModal" onClick={handleModalOpen}>
-            <div className="BankID-wrapper"><img src={BankIDIcon} alt="Klicka på BankID iconen"/></div>
-            <div className="Text-wrapper"><p className="mainText">BankID med QR-kod</p></div>
+            <div><img src={BankIDIcon} alt="Click on card to open QR code"/></div>
+            <div><p className="mainText">BankID med QR-kod</p></div>
             <div className="arrowIcon"><FaArrowRight size={20}/></div>
           </button>
 
           <LoginwithQRCode isOpen={isModalOpen} onClose={handleModalClose} />
           <Dropdown />
           <div className="btnPass">
-              <div className="User-wrapper"><img src={UserLogo} alt="Ikon logga in med email och lösenord ej klickbar"/></div>
-              <div className="Text-wrapper"><p>Disabled</p></div>
+              <div><img src={UserLogo} alt="Disabled card for login with email and password"/></div>
+              <div className="userLogin"><p className="userText">Disabled</p></div>
               <div className="arrowIcon"><FaArrowRight size={20} /></div>
           </div>
           <Dropdown2 />
           <div className="cancel-wrapper" >
               <Link className="optionCancel" to="/" tabIndex="0">
-                <p>Cancel?</p>
+                <p className="cancelP">Cancel?</p>
               </Link>
             </div>
           </div>

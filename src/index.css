@@ -11,10 +11,10 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   
-  --font-size-xs: 0.875rem;
   --font-size-sm: 1rem; 
-  --font-size-md: 1.125rem;
-  --font-size-lg: 1.5rem; 
+  --font-size-md: 1.5rem;
+  --font-size-lg: 1.75rem;
+  --font-size-xl: 2rem; 
 }
 
 .navbar {
@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.heartIcon {
+  max-width: 100%;
+  padding: 0 1rem 0 0;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -35,6 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media (min-width:600px) {
 
   }
@@ -51,6 +56,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   background-color: #e6e6e6;
   color: #140E14;
+  font-size: 1rem;
 
   @media (min-width: 600px) {
     width: 100vw;
