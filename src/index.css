@@ -56,14 +56,14 @@
   grid-template-rows: 1fr 1fr 1fr;
   background-color: #e6e6e6;
   color: #140E14;
-  font-size: 1rem;
 
   @media (min-width: 600px) {
     width: 100vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 2rem;
-  }
+    height: 270px;
+}
 }
 
 .cookieText{
@@ -93,14 +93,36 @@
   background-color:  #d1bbe6;
   height: 48px;
   width: 9rem;
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
   border-radius: var(--border-radius-xs);
-}
+  font-weight: var(--font-weight-semibold);
+  }
+
+  .BtnAgree:hover {
+    background-color:  #dac9eb;
+    }
+
+  .BtnAgree:focus-within {
+      outline: 3px solid #FFDA00;
+        outline-offset: 2px;
+      }
+  
+
 
 .BtnNecess {
   border: 2px solid #666666;
   height: 48px;
   width: 9rem;
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
   border-radius: var(--border-radius-xs);
-}
+  font-weight: var(--font-weight-semibold);
+  }
+
+  .BtnNecess:hover {
+    background-color: #e6e6e6;
+  } 
+
+  .BtnNecess:focus-within {
+    outline: 3px solid #FFDA00;
+    outline-offset: 2px;
+  }

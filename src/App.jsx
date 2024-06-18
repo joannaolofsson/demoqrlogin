@@ -46,7 +46,7 @@ function App() {
    
             <div className="cookiePolicyLinkArea">
               <Link to="/cookie-policy" className="cookiePolicyLink">
-                <p>Read more about our cookie policy</p>
+                <p className="cookiePolicyP">Read more about our cookie policy</p>
               </Link>
             </div>
           </div>
