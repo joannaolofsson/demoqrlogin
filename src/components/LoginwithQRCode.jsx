@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FocusTrap from 'focus-trap-react';
-import QrImage from '../assets/QrCode.png';
+import QrImage from '../assets/QrMini.png';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import '../Qr.css';
@@ -93,10 +93,8 @@ function LoginwithQRCode({ isOpen, onClose }) {
                 </div>
                 <div className="instruction-wrapper">
                   <div className="qrInstruction">
-                    <ul>
-                      <li>Open BankID app in your mobile</li>
-                      <li>Tap QR-symbolen and follow instructions</li>
-                    </ul>
+                      <div>Open BankID app in your mobile</div>
+                      <div>Tap QR-symbolen and follow instructions</div>
                   </div>
                 </div>
                 <div className="change-wrapper" >
@@ -110,5 +108,6 @@ function LoginwithQRCode({ isOpen, onClose }) {
     </FocusTrap>
   );
 }
+
 
 export default LoginwithQRCode;

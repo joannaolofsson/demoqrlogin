@@ -3,8 +3,6 @@
 /*General styles*/ 
 
 :root {
-  font-family: "Nunito", sans-serif;
-  line-height: 1.5;
   background: rgb(237,241,246);
   background: linear-gradient(90deg, rgba(237,241,246,1) 45%, rgba(255,255,255,1) 100%);
 
@@ -30,24 +28,48 @@
     box-sizing: border-box;
 }
 
+body {
+font-family: 'Nunito', sans-serif;
+}
+
+
 h1 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxxl);
   font-weight: 700;
-  line-height: 1.5;
 }
 
 h2 {
-  font-size: var(--font-size-lg);
-  font-weight: 700;
+  font-size: var(--font-size-xxl);
   line-height: 1.5;
 }
 
 h3 {
-  font-size: var(--font-size-md);
-  font-weight: 600;
+
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
 }
 
 p {
-  font-size:var(--font-size-sm);
-  font-weight: var(font-weight-regular);
+  font-size:var(--font-size-md);
+  line-height: 1.5em;
+}
+
+li {
+  font-size:var(--font-size-md);
+  line-height: 1.5em;
+}
+
+.cardTextSpaceInline {
+  padding: var(--spacing-md) 0 var(--spacing-lg) var(--spacing-md);
+}
+
+.cardTextSpaceInline2 {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+}
+
+.cardTextSpaceOver {
+  padding: var(--spacing-lg) 0 0 var(--spacing-md);
 }

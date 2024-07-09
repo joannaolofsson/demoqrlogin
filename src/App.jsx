@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
 import LoginOptionDesktop from './pages/ChooseLoginOption';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <>
+    <Navbar />
       <div className="container">
         <div className="flexContainer">
         {!consented && (

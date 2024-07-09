@@ -15,8 +15,8 @@ const Dropdown2 = () => {
     return (
         <div className="dropContainer" tabIndex="0">
         <div className="dropArrow">
-        <button className="btnDropdown" onClick={handleOpen}><p>Login with email and password</p></button>
-        {open ? <div><IoIosArrowUp size={24}/></div> : <div><IoIosArrowDown size={24}/></div>}
+        <button className="btnDropdown" onClick={handleOpen}><p className="font-face-rg">Login with email and password</p></button>
+        {open ? <div className="iconDrop"><IoIosArrowUp size={16}/></div> : <div><IoIosArrowDown size={16}/></div>}
         </div>
         
         {open ? (

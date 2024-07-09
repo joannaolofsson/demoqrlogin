@@ -23,9 +23,11 @@ export const DrawerContents = () => {
       <div className="flexHeading">
             <p>My personal</p>
             <h3>Login</h3>
- 
-      <h3>Choose you login:</h3>
-      </div>
+
+      <div className="spaceHeading">
+      <h4>Choose you login:</h4></div>
+      </div> 
+
           <div>
             <div className="cardMobileBankID" onClick={() => navigateTo('/')}>
             <img src={BankIDIcon} alt="BankIDs logotype to login with mobile BankID" />

@@ -10,8 +10,8 @@ function Navbar() {
         <nav className="navbar">
             <div to="/" className="startHeroDesktop">
                 <img className="heartIcon" src={HeartIcon} alt="Picture of a heart, not to click on" />
-                <h1>I love login</h1>
-
+                <div className="navText">
+                <h3>login</h3></div>
             </div>
         </nav>
     </>

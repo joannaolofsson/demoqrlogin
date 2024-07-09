@@ -1,258 +1,263 @@
 /* Sidan där du väljer inloggningsalternativ */
 
 .flexcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexContent {
-    margin: 2rem 0 0 0;
-    color: white;
-    border: 0.2rem solid #5f6c7e;
-    background-color: #5f6c7e;
-    padding: 2rem;
-    border-radius: var(--font-size-md);
+  color: black;
+  background-color: white;
+  padding: 0 2.75em;
+}
+
+.flexHeading{
+  
+  padding: 1em 0 1em 0;
 }
 
 /* Knappen till modalen som syns på QR sidan*/
 
-.optionHeading {
-  margin: 1rem 0;
-}
-
-.optionHeadline {
-  margin: 0 0 1rem 0;
-}
-
 .btnModal {
-    
+  
+display: none;
+
+  @media (min-width: 600px) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1em;
+  height: 5.5em;
+  width: 400px;
+  overflow: hidden;
+  border: 2px solid #FFDA00;
+  background-color: #FFDA00;
+  cursor: pointer;
+  color: black;
+  list-style-type: none;
+  padding: 0 1.5em 0 0;
+  }
+}
+
+
+.btnModal:hover {
+  outline: none;
+
+  @media (min-width:600px) {
+    background-color: #ffe54d;
+  }
+}
+.btnModal:focus {
+  outline: none;
+
+  @media (min-width:600px) {
+    color: black;
+  }
+
+}
+.btnModal:focus-within {
+  outline: none;
+
+  @media (min-width:600px) {
+      outline: 3px solid #FFDA00;
+      outline-offset: 2px;
+    }
+  }
+
+
+.btnModal Link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bankIDIcon {
+  width: 80%;
+}
+
+
+.Text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bankArrowIcon {
+  height: 5.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spaceHeading {
+  padding-bottom: 1em;
+}
+
+.btnPass {
+  
   display: none;
 
-    @media (min-width: 600px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    height: 6rem;
-    width: 400px;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: var(--border-radius-xs);
-    background-color: #ffffff;
-    cursor: pointer;
-    color: black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-    list-style-type: none;
-    font-weight: var(--font-weight-semibold);
-    }
+  @media (min-width: 600px) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1em;
+  height: 4.4em;
+  width: 400px;
+  border: 4px solid #f2f2f2;
+  background-color: #fff;
+  cursor: not-allowed;
+  color: #000;
+  z-index: -100;
+  outline: none;
+  list-style-type: none;
+  font-weight: var(--font-weight-semibold);
+  padding: 0 1.1em 0 0.7em;
   }
+}
 
-  
-  .btnModal:hover {
-    outline: none;
+.userIcon {
+  width: 70%;
+}
 
-    @media (min-width:600px) {
-      background-color: #e6e6e6;
-    }
-  }
-  .btnModal:focus {
-    outline: none;
+.mainText {
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-    @media (min-width:600px) {
-      color: black;
-    }
-
-  }
-  .btnModal:focus-within {
-    outline: none;
-
-    @media (min-width:600px) {
-        outline: 3px solid #FFDA00;
-        outline-offset: 2px;
-      }
-    }
+.bankArrowIcon {
+  height: 4.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
-  .btnModal Link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-
-  .Text-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arrowIcon {
-    height: 5.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 1rem 0 0;
-  }
-  
-  .btnPass {
-    
-    display: none;
-
-    @media (min-width: 600px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    height: 6rem;
-    width: 400px;
-    border: 2px solid #ccc;
-    border-radius: var(--border-radius-xs);
-    background-color: #fff;
-    cursor: not-allowed;
-    color: #000;
-    z-index: -100;
-    outline: none;
-    list-style-type: none;
-    font-weight: var(--font-weight-semibold);
-    }
-  }
-
-
-  .userLogin {
-    display: flex;
-    justify-content: center;
-  }
-
-  .userText {
-
-    width: 200px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .mainText {
-
-    width: 200px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
 
 /* Hjälptext */ 
 
 .cancel-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: right;
-    width: 400px;
-    padding: 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  width: 400px;
+  padding: 0.25rem;
 }
 
 
 .option-wrapper{
-  background-color: none;
-  outline: none;
-  padding: 1rem;
+background-color: none;
+outline: none;
+padding: 1rem;
 }
 
 .cancelP{
-  cursor: pointer;
-  color: white;
-  border: none; 
-  font-size: var(--font-size-xs);
-  margin: 0.75rem;
-  padding: 0.5rem;
+cursor: pointer;
+color: black;
+border: none; 
+padding: 0.5rem;
 }
 
 .cancelP:hover {
-  background-color: #4c5665;
-  border-radius: var(--border-radius-xs);
+background-color: #f2f2f2;
+border-radius: var(--border-radius-xs);
 
 }
 
 .cancelP:focus {
-  color: #FFDA00;
-  border-radius: var(--border-radius-xs);
+border-radius: var(--border-radius-xs);
 }
 
 .cancelP:focus-within {
-  outline: 3px solid #FFDA00;
-  border-radius: var(--border-radius-xs);
+outline: 3px solid #FFDA00;
+border-radius: var(--border-radius-xs);
 }
 
 /* Dropdown function med pil */
 
 .dropContainer {
+  background-color: transparent;
+  overflow: hidden;
+  padding: 0.3rem;
+  margin: 0 0 1rem 0;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: 600px) {
     background-color: transparent;
     border-radius: 0 0rem 1rem 1rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5em 0;
     overflow: hidden;
     padding: 0.3rem;
     outline: none;
+  }
+}
 
-    @media (min-width: 600px) {
-      background-color: transparent;
-      border-radius: 0 0rem 1rem 1rem;
-      margin: 0 0 1rem 0;
-      overflow: hidden;
-      padding: 0.3rem;
-      outline: none;
-    }
+.iconDrop {
+padding: 0.1em;
 }
 
 .dropArrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  color: black;
+  
 }
 
 
 .btnDropdown {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: var(--font-size-xl);
-    padding: 1.3rem;
-    cursor: pointer;
-    outline: none;
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 0.1em 0.5em .3em 0;
+  cursor: pointer;
+  outline: none;
 }
 
 .btnDropdown:hover {
-  background-color: #4c5665;
-  border-radius: var(--border-radius-xs);
+background-color: #f2f2f2;
+border-radius: var(--border-radius-xs);
+padding: 0.1em 0.5em .3em 0;
 }
 
 
 .btnDropdown:focus-within {
-  outline: none;
+outline: none;
+padding: 0.1em 0.5em .3em 0;
 
-  @media (min-width: 600px) {
-    outline: 3px solid #FFDA00;
-    border-radius: var(--border-radius-xs);
-  }
+@media (min-width: 600px) {
+  outline: 3px solid #FFDA00;
+  border-radius: var(--border-radius-xs);
+}
 }
 
 .dropList {
-    background-color: #ffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 0 0 2rem; 
-    color: black;
-    border-radius: var(--border-radius-xs);
+  background-color: #fff;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5em 2.5em; 
+  color: black;
+  border-radius: var(--border-radius-xs);
 }
 

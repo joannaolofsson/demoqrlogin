@@ -1,385 +1,384 @@
 .btnDrawer {
-    background-color: #FFDA00;
-    color: black;
-    border: 3px solid #ffffff;
-    padding: 0.5rem 2rem;
-    margin: 0 auto;
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-semibold);
-    cursor: pointer;
-    border-radius: var(--border-radius-l);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 5rem;
-    left: 40%;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 600px) {
-      display: none;
-    }
-}
-
-.drawerWrapper {
+  background-color: #FFDA00;
+  color: black;
+  border: 3px solid #ffffff;
+  padding: 0.5rem 2rem;
+  margin: 0 auto;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  border-radius: var(--border-radius-l);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5rem;
+  left: 40%;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0 0 0 2rem;
 
-  @media (min-width:600px) {
+  @media (min-width: 600px) {
     display: none;
   }
 }
-  
+
+.drawerWrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+margin: 0 0 0 2rem;
+
+@media (min-width:600px) {
+  display: none;
+}
+}
+
 .Drawer__Container {
-    height: 500px;
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    background: rgb(237,241,246);
-    background: linear-gradient(90deg, rgba(237,241,246,1) 45%, rgba(255,255,255,1) 100%);
-    color: black;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(100%);
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    box-shadow: 5px 0px 18px rgb(0, 0, 0, 0);
-    z-index: 100;
-  }
-  
-  .Drawer__Container--isOpen {
-    transform: translateY(0%);
-    box-shadow: unset;
-    box-shadow: 5px 8px 18px rgb(0, 0, 0, 0.7);
-  }
+  height: 500px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  background: rgb(237,241,246);
+  background: linear-gradient(90deg, rgba(237,241,246,1) 45%, rgba(255,255,255,1) 100%);
+  color: black;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 5px 0px 18px rgb(0, 0, 0, 0);
+  z-index: 100;
+}
 
-  .DrawerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+.Drawer__Container--isOpen {
+  transform: translateY(0%);
+  box-shadow: unset;
+  box-shadow: 5px 8px 18px rgb(0, 0, 0, 0.7);
+}
 
-  .Drawer__Header {
-    padding: 0.5rem;
-  }
+.DrawerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-  .closeText {
-    align-self: flex-end;
-    cursor: pointer;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    color: black;
-    margin: 1rem 0;
-    padding: 0 1rem;
-  }
+.Drawer__Header {
+  padding: 0.5rem;
+}
 
-  .flexHeading {
-    margin-bottom: 0.5rem;
-  }
+.closeText {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: black;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
 
-  .cardMobileBankID {
-    width: 300px;
-    background-color: #fff;
-    border: 1px solid black;
-    border-radius: var(--border-radius-xs);
-    padding: 1rem;
-    margin: 0 0 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: var(--font-weight-semibold);
-  }
+.flexHeading {
+  margin-bottom: 0.5rem;
+}
 
-  .cardUserLogin {
-    width: 300px;
-    background-color: #e6e6e6;
-    border: 1px solid black;
-    padding: 1rem;
-    border-radius: var(--border-radius-xs);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: var(--font-weight-semibold);
-  }
+.cardMobileBankID {
+  width: 300px;
+  background-color: #FFDA00;
+  border: 1px solid #FFDA00;
+  border-radius: var(--border-radius-xs);
+  padding: 0 1em 0 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-weight-semibold);
+}
 
-  .arrowIcon {
-    padding: 0 0 0 1rem;
-  }
+.cardUserLogin {
+  width: 300px;
+  background-color: #fff;
+  border: 3px solid #e6e6e6;
+  border-radius: var(--border-radius-xs);
+  padding: 0 1em 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-weight-semibold);
+}
 
-  .drawerCancel {
-    color: white;
-  }
+.arrowIcon {
+  padding: 0 0 0 1rem;
+}
+
+.drawerCancel {
+  color: white;
+}
 
 
-  
-  /* Syns på sidan home men täcks av overlay när drawer triggas */
-  
-  .PageContents__Container {
-    color: #d8d8d8;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
 
-  
-  .btnLoginDesktop {
-    background: #FFDA00;
-    color: black;
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-    text-decoration: none;
-    border: 3px solid #ffffff;
-    padding: 0.5rem 2rem;
-    border-radius: 30px;
-    font-weight: var(--font-weight-semibold);
-    opacity: 0.8;
-    
-  
-    @media (max-width: 600px) {
-      display: none; 
-    }
-  }
-  
-  .btnLoginDesktop:hover {
-    background-color: #ffe133;
+/* Syns på sidan home men täcks av overlay när drawer triggas */
 
-    @media (max-width: 600px) {
-      display: none; 
-    }
+.PageContents__Container {
+  color: #d8d8d8;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+
+.btnLoginDesktop {
+  background: #FFDA00;
+  color: black;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  text-decoration: none;
+  border: 3px solid #ffffff;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  opacity: 0.8;
+
+
+  @media (max-width: 600px) {
+    display: none; 
   }
 
-  .btnLoginDesktop:focus-within {
-    outline: 3px solid #FFDA00;
-    outline-offset: 2px;
-
-    @media (max-width: 600px) {
-      display: none; 
-    }
+  p {
+    font-weight: 600;
   }
+}
 
-  
+
+.btnLoginDesktop:hover {
+  background-color: #ffe133;
+
+  @media (max-width: 600px) {
+    display: none; 
+  }
+}
+
+.btnLoginDesktop:focus-within {
+  outline: 3px solid #FFDA00;
+  outline-offset: 2px;
+
+  @media (max-width: 600px) {
+    display: none; 
+  }
+}
+
+
 .startHeroDesktop {
-    display: flex;
-    flex-direction: row;
-    padding: 0 0 0 1.5rem;
-    margin: 0 2rem;
-  }
+  display: flex;
+  flex-direction: row;
+  margin: 0 9.75em;
+}
 
 /* Kort på framsidan */
 
 .cardList {
-    display: grid;
+  width: 90%;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1em;
+
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    margin-top: 2rem;
-  
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
   }
+}
 
-  
-  .cardHelp  {
-    grid-area: 1 / 1 / 2 / 2;
-    background-color: #f9f9f9;
-    color: black;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-xs);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out; 
-    margin: 1rem;
-    padding: 1rem;
-    position: relative;
-  
-    @media (min-width:1024px) {
-      grid-area: 1 / 1 / 2 / 4;
-    }
+
+
+.cardHelp  {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius-xs);
+
+  @media (min-width:1024px) {
+    grid-area: 1 / 1 / 2 / 4;
   }
+}
 
-  .cardHelp:hover,
-  .cardBankID:hover,
-  .cardCookie:hover {
-    background-color: #e0e0e0
-  }
+.cardHelp:hover,
+.cardBankID:hover,
+.cardCookie:hover {
+  background-color: #f1f4f8;
+  border: 1px solid #f1f4f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out; 
+}
 
-  .cardHelp:focus,
-  .cardImage1:focus,
-  .cardImage2:focus,
-  .cardBankID:focus,
-  .cardCookie:focus {
-    color: #FFDA00;
-  }
+.cardHelp:focus,
+.cardImage1:focus,
+.cardImage2:focus,
+.cardBankID:focus,
+.cardCookie:focus {
+  color: #FFDA00;
+}
 
-  .cardHelp:focus-within,
-  .cardImage1:focus-within,
-  .cardImage2:focus-within,
-  .cardBankID:focus-within,
-  .cardCookie:focus-within {
-        outline: 3px solid #FFDA00;
-        outline-offset: 2px;
-  }
+.cardHelp:focus-within,
+.cardImage1:focus-within,
+.cardImage2:focus-within,
+.cardBankID:focus-within,
+.cardCookie:focus-within {
+      outline: 3px solid #FFDA00;
+      outline-offset: 2px;
+}
 
-  .cardHelp Link::after,
-  .cardBankID Link::after,
-  .cardCookie Link::after {
-    content: "";
-    display: block;
+.cardHelp Link::after,
+.cardBankID Link::after,
+.cardCookie Link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cardHelpContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardBannerHelp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;            
+  color: black;
+  padding: 1.75em;
+  border-radius: 0 0 0.5em 0;
+  font-weight: 600;
+}
+
+.cardHelpText {
+  color: #333;
+}
+
+
+.card-action {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+
+.cardImage1 {
+  display: none;
+
+  @media (min-width:1024px) {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    display: grid;
+    grid-area: 1 / 4 / 2 / 6;
   }
-  
-  .cardHelpContent {
-    display: flex;
-    flex-direction: row;
+}
+
+.cardBankID { 
+  grid-area: 2 / 1 / 3 / 2; 
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  color: black;
+
+  @media (min-width:1024px) {
+    grid-area: 2 / 2 / 3 / 4;
   }
-  
-  .cardBannerHelp {
-    display: flex;
-    flex-direction: column;
+}
+
+
+.cardBannerBID {
+  width: 80px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5em;
+  border-radius: 0 3em 3em 0;
+}
+
+.cardBIDText {
+  color: #333;
+  padding: 1.5em;
+}
+
+.cardBankIDContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cardImage2{
+  display: none;
+
+  @media (min-width: 1024px) {
+    width: 100%;
+    display: grid;
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: #EDF1F6;
     justify-content: center;
     align-items: center;
-    background-color: #5f6c7e;
-    color: white;
-    padding: 1rem;
-    border-radius: var(--border-radius-xs);
   }
-  
-  .cardHelpText {
-    padding: 2rem;
-    color: #333;
-  }
+}
 
-  
-  .card-action {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-  }
 
-  
-  .cardImage1 {
-    display: none;
-  
-    @media (min-width:1024px) {
-      display: grid;
-      grid-area: 1 / 4 / 2 / 6;
-      background-color: #EDF1F6;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius-xs);
-      margin: 1rem;
-      padding: 1rem;
-    }
-  }
-  
-  .cardBankID { 
-    grid-area: 2 / 1 / 3 / 2; 
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-xs);
-    overflow: hidden;
-    margin: 1rem;
-    padding: 1rem;
-    color: black;
-  
-    @media (min-width:1024px) {
-      grid-area: 2 / 2 / 3 / 4;
-    }
-  }
 
-  
-  .cardBannerBID {
-    width: 80%;
-    background-color: #5f6c7e;
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 0 1rem 0 0;
-    gap: 0.8rem;
-  }
-  
-  .cardBIDText {
-    padding: 2rem;
-    color: #333;
-  }
+/* Card about Cookies */ 
 
-  .cardBankIDContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
+.cardCookie {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  color: black;
+
+
+  @media (min-width:1024px) {
+    grid-area: 2 / 4 / 3 / 6;
   }
-  
-  .cardImage2{
-    display: none;
-  
-    @media (min-width: 1024px) {
-      display: grid;
-      grid-area: 2 / 1 / 3 / 2;
-      background-color: #EDF1F6;
-      border: 1px solid #ddd;
-      border-radius: var(--border-radius-xs);
-      margin: 1rem;
-      padding: 1rem;
-    }
-  }
+}
+
+
+.cardBannerCookie {
+  width: 80px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5em;
+  border-radius: 0 3em 3em 0;
+}
   
 
-  
-  /* Card about Cookies */ 
-  
-  .cardCookie {
-    grid-area: 3 / 1 / 4 / 2;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-xs);
-    overflow: hidden;
-    margin: 1rem;
-    padding: 1rem;
-    color: black;
-  
-  
-    @media (min-width:1024px) {
-      grid-area: 2 / 4 / 3 / 6;
-    }
-  }
+.cardCookieContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-  
-  .cardBannerCookie {
-    width: 80%;
-    align-self: flex-end;
-    background-color: #5f6c7e;
-    color: white;
-    display: flex;
-    justify-items: flex-end;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem 0 0 1rem;
-    gap: 0.8rem;
-  }
-    
-  
-  .cardCookieContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .cardCookieText {
-    padding: 2rem;
-    color: #333;
-  }
-  
+.cardCookieContentHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardCookieText {
+  color: #333;
+  padding: 1.5em;
+}
+
+.logotype {
+  width: 100%;
+  padding: 0 1em 0 0;
+}
