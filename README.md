@@ -1,13 +1,21 @@
+# Login function
+This is my final project for my education at Chas Academy "UX/UI designer with frontend skills". THe project was created for and together with a large energy company in Sweden. And my angle was to create a accessible login function, with BankID.
 
-Detta är mitt examens projekt för utbildningen UX / UI design med frontend kompentens.
+# Limitations
+I'm mot allowed to display the companys design or their name. There for my plan is to change the design so that it better shows my interest. 
 
-Projektet består av en inloggning med BankID. BankID'et i sig består av en bild
+The BankID is a design login, what shows how an accessible BankID could look. The accessibility has taken center stage and the styling has ended up in the back seat. My project was first and most a UX designproject with a report. This code was secundary.
 
-/ Joanna Olofsson
+# Challenges
 
 
+# How I solved it
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Wish list
+To update the code to React and Typescript 
+Change this project to another area, which is fictive in order not to reveal any secrets. 
+
+# If I could start all over again
+If I started this project again, I would focus more on the code and on the accessibility and not som much on the design.
+
