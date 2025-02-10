@@ -13,7 +13,7 @@ Designing a login function with BankID meant taking many factors into account. S
 The solution is a compromise of all important aspects, with accessibility being the top priority.
 
 ## Wish List
-- Create a more complete login function based on a different type of company, allowing for a more comprehensive design.
+Create a more complete login function based on a different type of company, allowing for a more comprehensive design.
 
 ## If I Could Start All Over Again
 If I started this project again, I would focus more on the code and accessibility, rather than primarily on the design.
